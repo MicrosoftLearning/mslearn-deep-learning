@@ -53,7 +53,7 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
     - **Compute name**: *enter a unique name*
     - **Location**: *The same location as your workspace*
     - **Virtual machine type**: CPU
-    - **Virtual machine size**: Standard_DS3_v2
+    - **Virtual machine size**: Standard_DS11_v2
     - **Total Available Quotas**: This shows dedicated cores available.
     - **Show advanced settings**: Note the following settings, but do not select them: 
         - **Enable SSH access**: Unselected *(you can use this to enable direct access to the virtual machine using an SSH client)*
