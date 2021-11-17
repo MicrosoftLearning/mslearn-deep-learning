@@ -94,6 +94,22 @@ One of the benefits of Azure Machine Learning is the ability to create cloud-bas
         ```
 3. After reviewing and creating the environment, Azure Machine Learning will automatically build the environment. You can view its progress in the **Details** tab of the environment.
 
+## Clone the repo
+
+1. In Azure Machine Learning Studio, open the **Notebooks** page.
+2. Select **Terminal** or the **Open terminal** icon to open a terminal. Check that the **Compute** is set to your compute instance and that the current path is the **/users/your-user-name** folder.
+3. Enter the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
+4. Enter the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
+
+    ```bash
+    git clone https://github.com/MicrosoftLearning/mslearn-deep-learning mslearn-deep-learning
+    ```
+
+4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/mslearn-deep-learning** folder has been created.
+5. Close the terminal pane, terminating the session.
+
+> **Tip**: The instructions for the exercises are in the **Instructions** folder. The necessary notebooks, scripts, and artifacts are in the **Allfiles** folder.
+
 ## Stop your compute instance when done with the exercises
 
 If you've finished exploring Azure Machine Learning for now, you should shut down your compute instance to avoid incurring unnecessary charges in your Azure subscription. The compute cluster automatically scales down to 0 nodes when idle.
