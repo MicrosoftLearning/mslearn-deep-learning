@@ -4,9 +4,9 @@ permalink: index.html
 layout: home
 ---
 
-# Content Directory
+# Train compute-intensive models with Azure Machine Learning
 
-Hyperlinks to each of the lab exercises and demos are listed below.
+Hyperlinks to each of the lab exercises are listed below.
 
 ## Labs
 

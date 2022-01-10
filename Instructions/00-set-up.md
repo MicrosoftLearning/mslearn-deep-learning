@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Create an Azure Machine Learning workspace'
+    title: 'Set up: Create an Azure Machine Learning workspace'
 ---
 
 # Create and Explore an Azure Machine Learning Workspace
