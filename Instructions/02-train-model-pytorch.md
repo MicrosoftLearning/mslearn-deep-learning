@@ -4,9 +4,9 @@ lab:
     module: 'Module: Train compute-intensive models with Azure Machine Learning'
 ---
 
-# Load and preprocess data with RAPIDS
+# Train a PyTorch model with a GPU compute cluster
 
-To use GPUs to load and preprocess data, data scientists can work with the RAPIDS framework. More specifically, with the cuDF library. In this exercise, you'll use cuDF to preprocess data with a GPU cluster in Azure Machine Learning.
+To train a model with GPUs, data scientists can work with the PyTorch library. In this exercise, you'll use PyTorch to train a Convolutional Neural Network (CNN) model on the MNIST data with a GPU cluster in Azure Machine Learning.
 
 ## Before you start
 
