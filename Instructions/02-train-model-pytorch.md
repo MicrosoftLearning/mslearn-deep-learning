@@ -12,34 +12,14 @@ To use GPUs to load and preprocess data, data scientists can work with the RAPID
 
 If you have not already done so, complete the *[Set-up](00-set-up.md)* exercise to create an Azure Machine Learning workspace, compute instance, compute cluster, and to clone the notebooks required for this exercise.
 
-## Create an environment
-
-1. In Azure Machine Learning studio, view the **Environments** page.
-2. In the **Custom environments** tab, create a new environment with the following settings:
-    - **Name**: rapids-mlflow
-    - **Description**: *Optional*
-    - **Choose environment type**: Dockerfile
-    - **Dockerfile**: Copy and paste the code below:
-
-        ```
-        FROM rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
-        RUN apt-get update && \
-        apt-get install -y fuse && \
-        source activate rapids && \
-        pip install azureml-mlflow && \
-        pip install azureml-dataprep
-        ```
-3. After reviewing and creating the environment, Azure Machine Learning will automatically build the environment. You can view its progress in the **Details** tab of the environment.
-
 ## Open the notebook
 
 Most of the work will be done by our compute cluster which uses GPUs. To get the data and to submit the RAPIDS job, we will use notebooks supported by the compute instance.
 
 1. In [Azure Machine Learning studio](https://ml.azure.com), view the **Compute** page for your workspace; and on the **Compute Instances** tab, start your compute instance if it is not already running.
 2. Navigate to the **Notebooks** page in the Studio.
-3. Browse to the **/users/*your-user-name*/mslearn-deep-learning/Allfiles/Labs/01-preprocess-data** folder.
-4. Run through all cells of the `01-copy-data.ipynb` notebook to copy the flight data to the default datastore.
-5. Run through all cells of the `02-process-data.ipynb` to submit the Python script which loads and preprocesses the flight data with cuDF using the GPU compute cluster.
+3. Browse to the **/users/*your-user-name*/mslearn-deep-learning/Allfiles/Labs/02-train-model** folder.
+4. Run through all cells of the `01-train-model.ipynb` notebook to submit the Python script which trains a PyTorch CNN model on the MNIST dataset using the GPU compute cluster.
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
