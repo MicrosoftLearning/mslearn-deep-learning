@@ -1,5 +1,5 @@
 ---
-lab:
+labs:
     title: 'Set up: Create an Azure Machine Learning workspace'
 ---
 
