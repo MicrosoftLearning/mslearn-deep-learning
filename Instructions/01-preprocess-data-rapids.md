@@ -10,7 +10,26 @@ To use GPUs to load and preprocess data, data scientists can work with the RAPID
 
 ## Before you start
 
-If you have not already done so, complete the *[Set-up](00-set-up.md)* exercise to create an Azure Machine Learning workspace, compute instance, compute cluster, environment, and clone the notebooks required for this exercise.
+If you have not already done so, complete the *[Set-up](00-set-up.md)* exercise to create an Azure Machine Learning workspace, compute instance, compute cluster, and clone the notebooks required for this exercise.
+
+## Create an environment
+
+1. In Azure Machine Learning studio, view the **Environments** page.
+2. In the **Custom environments** tab, create a new environment with the following settings:
+    - **Name**: rapids-mlflow
+    - **Description**: *Optional*
+    - **Choose environment type**: Dockerfile
+    - **Dockerfile**: Copy and paste the code below:
+
+        ```
+        FROM rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
+        RUN apt-get update && \
+        apt-get install -y fuse && \
+        source activate rapids && \
+        pip install azureml-mlflow && \
+        pip install azureml-dataprep
+        ```
+3. After reviewing and creating the environment, Azure Machine Learning will automatically build the environment. You can view its progress in the **Details** tab of the environment.
 
 ## Open the notebook
 

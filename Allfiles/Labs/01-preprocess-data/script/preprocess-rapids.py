@@ -1,9 +1,9 @@
 # import libraries
 import os
 import argparse
-import mlflow
 
 import cudf
+import mlflow
 
 # define functions
 
@@ -18,12 +18,14 @@ def main(args):
 
     dtypes = {'Flight_Number_Reporting_Airline': 'float32', 'Year': 'float32', 'Quarter': 'float32', 'Month': 'float32', 'DayOfWeek': 'float32', 'DOT_ID_Reporting_Airline': 'float32', 'OriginCityMarketID': 'float32', 'DestCityMarketID': 'float32', 'DepTime': 'float32', 'DepDelay': 'float32', 'DepDel15': 'int', 'ArrTime': 'float32', 'ArrDelay': 'float32', 'ArrDel15': 'int', 'CRSDepTime': 'float32', 'CRSArrTime': 'float32', 'AirTime': 'float32', 'Distance': 'float32', 'Reporting_Airline': 'str', 'IATA_CODE_Reporting_Airline': 'str', 'Origin': 'str', 'OriginCityName': 'str', 'Dest': 'str', 'DestCityName': 'str', 'Cancelled': 'str'}
 
+    categorical_columns = ['Flight_Number_Reporting_Airline', 'DepTime', 'ArrTime', 'CRSDepTime', 'CRSArrTime', 'Reporting_Airline', 'Origin', 'OriginCityName', 'Dest', 'DestCityName', 'Airline']
+
     # Process the full dataset and save it to file
     processed_data = process_data(data_file_full, carriers_file, airports_file, cols, dtypes, categorical_columns)
-
+    
     count_rows = len(processed_data)
     mlflow.log_metric("processed rows", count_rows)
-    
+
     processed_data.to_csv('outputs/processed_data', index=False)
     
 # Define a function to process an entire dataset 
@@ -109,6 +111,4 @@ if __name__ == "__main__":
     # add space in logs
     print("*" * 60)
     print("\n\n")
-
-
 
