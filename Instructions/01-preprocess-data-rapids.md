@@ -1,6 +1,7 @@
 ---
 lab:
     title: 'Load and preprocess data with RAPIDS'
+    module: 'Module: Preprocessing large datasets with Azure Machine Learning'
 ---
 
 # Load and preprocess data with RAPIDS
