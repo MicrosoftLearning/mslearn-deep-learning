@@ -6,20 +6,12 @@ layout: home
 
 # Train compute-intensive models with Azure Machine Learning
 
-Hyperlinks to each of the lab exercises are listed below.
+This repository contains the hands-on lab exercises for the [self-paced modules on Microsoft Learn](add link). The exercises are designed to accompany the learning materials and enable you to practice using the technologies they describe.
 
-## Labs
+These exercises requires an Azure subscription and rights to create a GPU Virtual Machine. If you do not already have an Azure subscription, sign up at [https://azure.microsoft.com](https://azure.microsoft.com). To check the available GPU VMs, you can run the `az vm list-skus` command from the Azure Cloud Shell.
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
-| Module | Lab |
-| --- | --- | 
-{% for activity in labs  %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
-{% endfor %}
-
-## Demos
-
-{% assign demos = site.pages | where_exp:"page", "page.url contains '/Instructions/Demos'" %}
-| Module | Demo |
-| --- | --- | 
-{% for activity in demos  %}| {{ activity.demo.module }} | [{{ activity.demo.title }}]({{ site.github.url }}{{ activity.url }}) |
+{% assign labs = site.pages | where_exp:"page", "page.url contains '/instructions'" %}
+| Exercises |
+| ------- | 
+{% for activity in labs  %}| [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
