@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Load and preprocess data with RAPIDS'
-    module: 'Module: Preprocessing large datasets with Azure Machine Learning'
+    title: 'Train a PyTorch model with a GPU compute cluster'
+    module: 'Module: Train compute-intensive models with Azure Machine Learning'
 ---
 
 # Load and preprocess data with RAPIDS
