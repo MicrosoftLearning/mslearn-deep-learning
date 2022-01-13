@@ -67,14 +67,15 @@ To create a managed online endpoint, you'll use the Azure Machine Learning Studi
 
     - **Virtual machine size**: Choose **Standard_NC6s_v3** if possible to use GPU. Alternatively, choose **Standard_F4s_v2** to use CPU.
     - **Instance count**: 1
-4. Wait for the endpoint to be created and the deployment to be completed. 
+4. Wait for the endpoint to be created and the deployment to be completed. This usually takes around 10 minutes.
 
 > Tip!
-> If deployment takes exceptionally long, it may be because the name is not unique. Select the information icon under Provisioning state to go to the Azure portal and get an overview of the deployment of resources.
+> If deployment takes exceptionally long, it may be because the name is not unique. Select the information icon under Provisioning state to go to the Azure portal and get an overview of the deployment of resources. If you see this error, delete the endpoint and deployment, and recreate the endpoint with the Studio.
 
 5. Once deployment is ready, you can find it on the **Endpoints** page of the Azure Machine Learning Studio.
-6. Copy and save the **REST endpoint**.
-7. Copy and save 
+6. In the details overview of your endpoint, go to the **Consume** tab and copy and save the **REST endpoint**.
+7. Copy and save the **Primary key** under **Authentication**.
+8. Save the endpoint and key for the next part of the exercise, where you'll invoke the endpoint to get the model's predictions.
 
 ## Invoke the endpoint
 
