@@ -1,0 +1,5 @@
+name: densenet-onnx-model
+version: 1
+local_path: ./models
+model_format: Triton
+description: Registering my Triton format model.
