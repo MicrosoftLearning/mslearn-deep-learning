@@ -34,7 +34,10 @@ For Triton no-code-deployment, a model needs to be registered to the Azure Machi
     ```
     az extension add -n ml -y
     ```
-
+8. 
+    ```
+    az login
+    ```
 The model is stored in the **models** folder. You'll also find **create-triton-model.yml** which contains the configuration for registering the model. Explore the contents of this YAML file to learn that the registered model will be named **densenet-onnx-model** and the **model_format** is set to **Triton**.
 
 8. In the terminal, run the following command to register the model:
@@ -46,6 +49,32 @@ The model is stored in the **models** folder. You'll also find **create-triton-m
 
 ## Create the endpoint
 
+To create a managed online endpoint, you'll use the Azure Machine Learning Studio. Follow the steps below to deploy the previously registered model.
+
+1. Navigate to the **Models** page, and select the **densenet-onnx-model** to view its details.
+ ![Models page](./media/03-01-model-page.png)
+2. In the **Details** tab, click on **Deploy**. Then, select **Deploy to real-time endpoint**.
+ ![Model details](./media/03-02-model-deploy.png)
+3. In the **Create deployment** pane, create a managed online endpoint with the following settings:
+    - **Endpoint**: New
+    - **Endpoint name**: *Enter a unique name. Add random numbers to ensure uniqueness.*
+    - **Compute type**: Managed
+    - **Authentication type** Key
+
+    - **Select model**: densenet-onnx-model
+
+    - Keep all default settings for the **Deployment** and **Environment**.
+
+    - **Virtual machine size**: Choose **Standard_NC6s_v3** if possible to use GPU. Alternatively, choose **Standard_F4s_v2** to use CPU.
+    - **Instance count**: 1
+4. Wait for the endpoint to be created and the deployment to be completed. 
+
+> Tip!
+> If deployment takes exceptionally long, it may be because the name is not unique. Select the information icon under Provisioning state to go to the Azure portal and get an overview of the deployment of resources.
+
+5. Once deployment is ready, you can find it on the **Endpoints** page of the Azure Machine Learning Studio.
+6. Copy and save the **REST endpoint**.
+7. Copy and save 
 
 ## Invoke the endpoint
 
