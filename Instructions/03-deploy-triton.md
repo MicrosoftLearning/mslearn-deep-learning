@@ -6,7 +6,7 @@ lab:
 
 # Deploy Triton with an ONNX model to a managed online endpoint
 
-To deploy a model to an endpoint in Azure Machine Learning, you can use NVIDIA Triton Inference Server. In this exercise, you'll register an ONNX model that is already trained to the workspace. Deploying to an endpoint will be easy thanks to Triton's no-code-deployment option.
+To deploy a model to an endpoint in Azure Machine Learning, you can use NVIDIA Triton Inference Server. In this exercise, you'll register an ONNX model that is already trained to the workspace. Deploying to an endpoint will be easy thanks to Triton's no-code-deployment option in Azure Machine Learning.
 
 ## Before you start
 
@@ -14,7 +14,7 @@ If you have not already done so, complete the *[Set-up](00-set-up.md)* exercise 
 
 ## Register the model
 
-For Triton no-code-deployment, a model needs to be registered to the Azure Machine Learning workspace with format set to Triton. To do this, you'll use the CLI v2 in the terminal hosted by the compute instance.
+For Triton no-code-deployment, a model needs to be registered to the Azure Machine Learning workspace with format set to Triton. To do this, you'll use the CLI v2 in the terminal hosted by the compute instance. The model you'll register is a DenseNet model trained to identify images.
 
 1. In [Azure Machine Learning studio](https://ml.azure.com), view the **Compute** page for your workspace. 
 2. On the **Compute Instances** tab, start your compute instance if it is not already running.
@@ -34,11 +34,13 @@ For Triton no-code-deployment, a model needs to be registered to the Azure Machi
     ```
     az extension add -n ml -y
     ```
-8. 
+8. To use the CLI to register a model, you need to give access to your subscription. Run the command below and follow the instructions in the output to sign in with the email account that has access to the Azure subscription you're using for this exercise.
     ```
     az login
     ```
-The model is stored in the **models** folder. You'll also find **create-triton-model.yml** which contains the configuration for registering the model. Explore the contents of this YAML file to learn that the registered model will be named **densenet-onnx-model** and the **model_format** is set to **Triton**.
+The model is stored in the **models** folder (note the folder structure required for Triton). 
+
+You'll also find **create-triton-model.yml** which contains the configuration for registering the model. Explore the contents of this YAML file to learn that the registered model will be named **densenet-onnx-model** and the **model_format** is set to **Triton**.
 
 8. In the terminal, run the following command to register the model:
     ```
@@ -78,6 +80,8 @@ To create a managed online endpoint, you'll use the Azure Machine Learning Studi
 8. Save the endpoint and key for the next part of the exercise, where you'll invoke the endpoint to get the model's predictions.
 
 ## Invoke the endpoint
+
+After registering and deploying the model, you now have a managed online endpoint that you can use to get real-time predictions. You can integrate the endpoint with any app. To test that it works, you'll invoke the endpoint from a Python notebook.
 
 1. Go to the **Notebooks** page in the Studio.
 2. Navigate to the **/users/*your-user-name*/mslearn-deep-learning/Allfiles/Labs/03-deploy-model** folder and open the **01-invoke-endpoint.ipynb** notebook.
