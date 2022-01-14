@@ -44,7 +44,7 @@ You'll also find **create-triton-model.yml** which contains the configuration fo
 
 8. In the terminal, run the following command to register the model:
     ```
-    az ml model create -f create-triton-model.yml
+    az ml model create -f create-triton-model.yaml
     ```
 9. When the command has completed, go to the **Models** pane to find a new model named **densenet-onnx-model**. 
 10. Back on the **Notebooks** page, close the terminal pane to terminating the session.
