@@ -61,7 +61,7 @@ To learn how to work with GPUs within Azure Machine Learning, you'll work with a
     git clone https://github.com/MicrosoftLearning/mslearn-deep-learning mslearn-deep-learning
     ```
 
-4. When the command has completed, in the **My files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/mslearn-deep-learning** folder has been created.
+4. When the command has completed, in the **Notebooks** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/mslearn-deep-learning** folder has been created.
 5. Close the terminal pane, terminating the session.
 
 > **Tip**: The instructions for the exercises are in the **Instructions** folder. The necessary notebooks, scripts, and artifacts are in the **Allfiles** folder.
