@@ -38,7 +38,13 @@ To learn how to work with GPUs within Azure Machine Learning, you'll work with a
 
 ### Create a compute cluster
 
-3. On the **Compute clusters** tab, add a new compute cluster with the following settings. You'll use this to execute code that needs GPUs.
+> **Important:** To run the exercises, you need to use a NCv3 series compute which features NVIDIA's Tesla V100 GPU.
+
+For the exercises, you'll use a low-priority GPU compute cluster to save costs. As the compute cluster is low priority, it can be pre-empted if there are other workload isn't enough capacity in the region. To check for availability, you can use the following command in Cloud Shell to see which regions currently have availability: `az vm list-skus -s standard_nc6s_v3 --output table`
+
+After picking a region that has availability for the necessary GPU cluster, create the cluster in Azure Machine Learning:
+
+1. On the **Compute clusters** tab, add a new compute cluster with the following settings. You'll use this to execute code that needs GPUs.
     - **Location**: *The same location as your workspace*
     - **Virtual machine priority**: Low priority
     - **Virtual machine type**: GPU
@@ -48,8 +54,6 @@ To learn how to work with GPUs within Azure Machine Learning, you'll work with a
     - **Minimum number of nodes**: Leave at default 0.
     - **Maximum number of nodes**: Select 1 node.
     - Select **Create**.
-
-> **Important:** To run the exercises, you need to use a NCv3 series compute which features NVIDIA's Tesla V100 GPU.
 
 ## Clone the repo
 
