@@ -38,8 +38,7 @@ Most of the work will be done by our compute cluster which uses GPUs. To get the
 1. In [Azure Machine Learning studio](https://ml.azure.com), view the **Compute** page for your workspace; and on the **Compute Instances** tab, start your compute instance if it is not already running.
 2. Navigate to the **Notebooks** page in the Studio.
 3. Browse to the **/users/*your-user-name*/mslearn-deep-learning/Allfiles/Labs/01-preprocess-data** folder.
-4. Run through all cells of the `01-copy-data.ipynb` notebook to copy the flight data to the default datastore.
-5. Run through all cells of the `02-process-data.ipynb` to submit the Python script which loads and preprocesses the flight data with cuDF using the GPU compute cluster.
+4. Run through all cells of the `01-process-data.ipynb` to submit the Python script which loads and preprocesses the flight data with cuDF using the GPU compute cluster.
 
 > **Tip**: To run a code cell, select the cell you want to run and then use the **&#9655;** button to run it.
 
