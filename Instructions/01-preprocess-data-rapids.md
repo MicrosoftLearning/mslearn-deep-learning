@@ -23,11 +23,11 @@ If you have not already done so, complete the *[Set-up](00-set-up.md)* exercise 
 
         ```
         FROM rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
-        RUN apt-get update && \
-        apt-get install -y fuse && \
-        source activate rapids && \
-        pip install azureml-mlflow && \
-        pip install azureml-dataprep
+        RUN apt-get update \
+        && apt-get install -y fuse \
+        && source activate rapids \
+        && pip install azureml-mlflow \
+        && pip install azureml-dataprep
         ```
 3. After reviewing and creating the environment, Azure Machine Learning will automatically build the environment. You can view its progress in the **Details** tab of the environment.
 
