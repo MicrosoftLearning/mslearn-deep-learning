@@ -159,7 +159,7 @@ def main():
 
     torch.manual_seed(args.seed)
 
-    device = torch.device("cuda")
+    device = torch.device("cuda" if use_cuda else "cpu")
 
     kwargs = {"batch_size": args.batch_size}
     if use_cuda:
