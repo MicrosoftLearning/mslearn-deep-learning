@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Train a PyTorch model with a GPU compute cluster'
-    module: 'Module: Train compute-intensive models with Azure Machine Learning'
+  title: Train a PyTorch model with a GPU compute cluster
+  module: 'Module: Train compute-intensive models with Azure Machine Learning'
+  description: To train a model with GPUs, data scientists can work with the PyTorch
+    library. In this exercise, you'll use PyTorch to train a Convolutional Neural
+    Network (CNN) model on the MNIST data with a GPU cluster in Azure Machine Learning.
+  duration: 28 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Train a PyTorch model with a GPU compute cluster
