@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Set up: Create an Azure Machine Learning workspace'
+  title: 'Set up: Create an Azure Machine Learning workspace'
+  description: In this exercise, you will create and explore an Azure Machine Learning workspace.
+  duration: 46 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Create and Explore an Azure Machine Learning Workspace
