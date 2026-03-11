@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Deploy Triton with an ONNX model to a managed online endpoint'
-    module: 'Module: Deploy deep learning workloads to production with Azure Machine Learning'
+  title: Deploy Triton with an ONNX model to a managed online endpoint
+  module: 'Module: Deploy deep learning workloads to production with Azure Machine Learning'
+  description: To deploy a model to an endpoint in Azure Machine Learning, you can use NVIDIA Triton Inference Server. In this exercise, you'll register an ONNX model that is already trained to the workspace. Deploying to an endpoint will be easy thanks to Triton's no-code-deployment option in Azure Machine Learning.
+  duration: 10 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Deploy Triton with an ONNX model to a managed online endpoint
