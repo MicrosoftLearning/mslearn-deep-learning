@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Load and preprocess data with RAPIDS'
-    module: 'Module: Preprocessing large datasets with Azure Machine Learning'
+  title: Load and preprocess data with RAPIDS
+  module: 'Module: Preprocessing large datasets with Azure Machine Learning'
+  description: To use GPUs to load and preprocess data, data scientists can work with the RAPIDS framework. More specifically, with the cuDF library. In this exercise, you'll use cuDF to preprocess data with a GPU cluster in Azure Machine Learning.
+  duration: 36 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Load and preprocess data with RAPIDS
